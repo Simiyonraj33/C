@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+   int arr[100], n, sum = 0, *ptr;
+
+   printf("Enter the No.of Elements : ");
+   scanf("%d", &n);
+
+   ptr = (int *)malloc(n*sizeof(int));
+
+
+   printf("Enter %d Elements : \n", n);
+   int i;
+   for(i=0;i<n;i++)
+   {
+      scanf("%d", (ptr + i));
+   }
+
+   for(i=0;i<n;i++)
+   {
+      sum += *(ptr+i);
+   }
+
+   printf("Sum of the Array = %d\n", sum);
+
+   return 0;
+}
